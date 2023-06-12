@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign In</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--! main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <!-- header__top" -->
+        <div class="header__top mt-3">
+          <!-- header__top--content -->
+          <div
+            class="header__top--content d-flex justify-content-between align-items-center"
+          >
+            <!-- header__top--left -->
+            <div class="header__top--left">
+              <a href="./index.html">NIKE</a>
+            </div>
+            <!-- header__top--right -->
+            <div class="header__top--right">
+              <ul class="d-flex justify-content-between">
+                <li>
+                  <a href="#">Find a Store</a>
+                </li>
+                <li>
+                  <a href="#">Help</a>
+                </li>
+                <li>
+                  <a href="#">Sign In</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- header__main -->
+        <div class="header__main my-3">
+          <nav class="navbar navbar-expand-lg">
+            <!-- header__main--left -->
+            <div class="header__main--left">
+              <a class="navbar-brand" href="./index.html"
+                ><img id="ntn" src="./img/Logo_nike.png" alt="Logo_nike"
+              /></a>
+            </div>
+            <!-- header__main--main -->
+            <div
+              class="header__main--main collapse navbar-collapse justify-content-center"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">New & Featured</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Men</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Women</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Kids</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sake</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SNKRS</a>
+                </li>
+              </ul>
+            </div>
+            <!-- header__main--right -->
+            <div class="header__main--right d-flex align-items-center">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+              </form>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="signIn__title text-center w-50 mx-auto">
+          <a href="./index.html"
+            ><img
+              src="./img/Logo_nike.png"
+              alt="Logo_nike"
+              style="width: 100px"
+          /></a>
+          <h1 class="fs-1">BECOME A NIKE MEMBER</h1>
+          <p class="mb-5">
+            Create your Nike Member profile and get first 0386992381 to the very
+            best of Nike products, inspiration and community.
+          </p>
+          <!-- signIn__content -->
+          <div class="signIn__content d-flex mb-3">
+            <!-- signIn__content--left -->
+            <div class="signIn__content--left w-50 me-2">
+              <!--! Email -->
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idEmail"
+                  placeholder="name@example.com"
+                  onchange="checkInputOnchange('idEmail', 'errEmail',checkEmail('idEmail'))"
+                />
+                <label for="floatingInput">Email address</label>
+                <!--! err -->
+                <p
+                  id="errEmail"
+                  class="my-2 text-start"
+                  style="color: red; font-size: 13px; display: none"
+                >
+                  Please enter a valid email.
+                </p>
+              </div>
+              <!--! Password -->
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="idPass"
+                  placeholder="Password"
+                  onchange="checkInputOnchange('idPass', 'errPass', checkPassWord('idPass'))"
+                />
+                <label for="floatingPassword">Password</label>
+                <!--! err -->
+                <p
+                  id="errPass"
+                  class="my-2 text-start"
+                  style="color: red; font-size: 13px; display: none"
+                >
+                  Password does not meet minimum requirements.
+                </p>
+              </div>
+              <!--! Password confirm -->
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="idPassConfirm"
+                  placeholder="Password Confirm"
+                  onchange="checkInputOnchange('idPassConfirm', 'errPassConfirm', checkPassConfirm(idPassConfirm))"
+                />
+                <label for="floatingPasswordConfirm">Password confirm</label>
+                <!--! err -->
+                <p
+                  id="errPassConfirm"
+                  class="my-2 text-start"
+                  style="color: red; font-size: 13px; display: none"
+                >
+                  Password does not meet minimum requirements.
+                </p>
+              </div>
+            </div>
+            <!-- signIn__content--right -->
+            <div class="signIn__content--right w-50 ms-2">
+              <!--! User name -->
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idUserName"
+                  placeholder="User name"
+                  onchange="checkInputOnchange('idUserName', 'errUserName', checkUserName('idUserName'))"
+                />
+                <label for="floatingInput">User name</label>
+                <!--! err User name -->
+                <p
+                  id="errUserName"
+                  class="my-2 text-start"
+                  style="color: red; font-size: 13px; display: none"
+                >
+                  Please enter a valid user name.
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idPhone"
+                  placeholder="Phone number"
+                  onchange="checkInputOnchange('idPhone', 'errPhone', checkPhoneNumbers('idPhone'))"
+                />
+                <label for="floatingPassword">Phone number (+84)</label>
+                <!--! err -->
+                <p
+                  id="errPhone"
+                  class="my-2 text-start"
+                  style="color: red; font-size: 13px; display: none"
+                >
+                  Please enter a valid phone name.
+                </p>
+              </div>
+              <!-- form check -->
+              <div
+                class="form__check d-flex is-invalid justify-content-around align-items-center"
+                style="height: 56px"
+              >
+                <label class="form-check-label">Gender: </label>
+                <!--! Male -->
+                <input
+                  type="radio"
+                  value="true"
+                  class="form-check-input gender"
+                  name="flexRadioDefault"
+                  id="idMale"
+                />
+                Male<br />
+                <!--! Female -->
+                <input
+                  type="radio"
+                  value="false"
+                  class="form-check-input gender"
+                  name="flexRadioDefault"
+                  id="idFemale"
+                />
+                Female<br />
+              </div>
+              <!--! err -->
+              <p
+                id="errGender"
+                class="my-2 text-center"
+                style="color: red; font-size: 13px; display: none"
+              >
+                Please select a preference.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn w-100"
+            id="btnJoinUs"
+            style="color: #fff; background-color: #000"
+            onclick="addUser()"
+          >
+            JOIN US
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <!--! cdn axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./models/User.js"></script>
+    <script src="./controller/helper.js"></script>
+    <script src="./controller/validation.js"></script>
+    <script src="./js/signIn.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1455px !important;
+}
+
+.btnShoes {
+  padding: 20px 35px;
+  font-size: 15px;
+  font-weight: 500;
+  background-image: linear-gradient(to right, #12fff7 0, #b3ffab 51%, #12fff7 100%);
+  text-transform: uppercase;
+  background-size: 200%;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  line-height: 1.2;
+}
+
+.cardHover:hover {
+  transform: rotate(10deg);
+}
+
+header .header__top .header__top--content .header__top--left a {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+header .header__top .header__top--content .header__top--right ul li {
+  margin-left: 30px;
+}
+header .header__top .header__top--content .header__top--right ul li a {
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+header .header__main .navbar .header__main--left .navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+header .header__main .navbar .header__main--main ul li a {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+header .header__main .navbar .header__main--right form input {
+  border-radius: 50px;
+  border: 2px solid black;
+}
+header .header__main .navbar .header__main--right .fa-regular {
+  margin-right: 5px;
+  font-size: 25px;
+}
+header .header__main .navbar .header__main--right .fa-solid {
+  font-size: 25px;
+}
+
+.product .product__title h1 {
+  font-weight: 900;
+  font-size: 60px;
+}
+footer {
+  background: linear-gradient(to right, #4daf54, #3d8880);
+}
+footer .container {
+  max-width: 1200px !important;
+  margin: auto;
+}
+footer .container .footer__main .row .col-4 ul li a {
+  color: #fff;
+}
+footer .container .footer__main .row .col-4 ul li .footer__phone--left i {
+  color: #fff;
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #b3ffab; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #12fff7, #b3ffab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 50px;
+}
+footer .container .footer__main .row .col-4 ul li .footer__phone--right span {
+  font-weight: 600;
+  color: #fff;
+}
+footer .container .copyRight .footer__cypyright--right a i {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.card {
+  border-color: #12fff7;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card i {
+  color: #12fff7;
+  transition: all 0.5s;
+}
+.card i:hover {
+  color: #e74c3c;
+}
+.card .card-body {
+  color: #12fff7;
+}
+.card .card-body h5 {
+  font-weight: 700;
+}
+.card .card-body .btnShoes:hover {
+  background-position: right center;
+  border-color: transparent;
+}/*# sourceMappingURL=main.css.map */

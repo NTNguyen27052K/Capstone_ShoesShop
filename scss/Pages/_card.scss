@@ -1,0 +1,26 @@
+.card {
+  border-color: #12fff7;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  img {
+  }
+  i {
+    color: #12fff7;
+    transition: all 0.5s;
+    &:hover {
+      color: #e74c3c;
+    }
+  }
+  .card-body {
+    color: #12fff7;
+
+    h5 {
+      font-weight: 700;
+    }
+    .btnShoes {
+      &:hover {
+        background-position: right center;
+        border-color: transparent;
+      }
+    }
+  }
+}
