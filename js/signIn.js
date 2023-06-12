@@ -56,10 +56,6 @@ let addUser = () => {
       // đẩy dữ liệu lấy được xuống local
       localStorage.setItem("infoUser", JSON.stringify(res.data.content));
       window.location.href = "./../index.html";
-      document.getElementById(
-        "idSignIN"
-      ).innerHTML = `${res.data.content.name}`;
-      console.log(res.data.content.name);
     }
   });
   promise.catch(function (err) {
