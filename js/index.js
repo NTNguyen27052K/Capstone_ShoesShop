@@ -12,7 +12,6 @@ let getAllProduct = (pageIndex) => {
   });
   promise.then(function (res) {
     renderProduct(res.data.content.items);
-    // renderProductPHL(res.data.content.items);
   });
   promise.catch(function (err) {
     console.log(err);
@@ -83,11 +82,11 @@ let renderProduct = (arr) => {
                     <div class="d-flex">
                       <a
                         href="./detail.html?productId=${product.id}"
-                        class="btn btn-danger w-50 me-1 btnShoes"
+                        class="btn w-50 me-1 btnShoes"
                       >
                         Buy now
                       </a>
-                      <button class="btn btn-danger w-50 ms-1 btnShoes">
+                      <button class="btn w-50 ms-1 btnShoes">
                         Add cart
                       </button>
                     </div>
@@ -100,33 +99,40 @@ let renderProduct = (arr) => {
 };
 //! ---------------- Render Product Category ----------------
 let renderProductCategory = (arr) => {
-  var content = "";
-  for (var i = 0; i < arr.length; i++) {
-    content += `
+  let renderProductByCategory = arr.map(
+    (productCategory) => `
     <div class="col-12 col-md-6 col-xl-4 mb-4">
-    <div class="card">
-      <img
-        src=${arr[i].image}
-        class="card-img-top"
-        alt="shoe1"
-        id="shoe1"
-      />
-      <div class="card-body">
-        <h5 class="card-title">${arr[i].name}</h5>
-        <p>${arr[i].shortDescription}</p>
-        <p>Price: ${arr[i].price}$</p>
-        <div class="d-flex">
-        <a
-        href="./detail.html?productId=${arr[i].id}"
-        class="btn btn-danger w-50 me-1"
-      >Buy now</a>
-              <button class="btn btn-danger w-50 ms-1">Add cart</button>
+              <div class="card">
+                <a
+                href="./detail.html?productId=${productCategory.id}"
+                "
+                >
+                <img src=${productCategory.image}
+                class="card-img-top" alt="shoe1" id="shoe1" />
+                </a>
+                
+                <div class="card-body">
+                  <h3 class="card-title text-center">${productCategory.name}</h3>
+                  <h5 class="text-center my-3">${productCategory.price}$</h5>
+                  <div class="d-flex">
+                    <a
+                      href="./detail.html?productId=${productCategory.id}"
+                      class="btn w-50 me-1 btnShoes"
+                    >
+                      Buy now
+                    </a>
+                    <button class="btn w-50 ms-1 btnShoes">
+                      Add cart
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-      </div>
-    </div>
-  </div>`;
-  }
-  document.getElementById("product").innerHTML = content;
+    `
+  );
+
+  document.getElementById("product").innerHTML =
+    renderProductByCategory.join("");
 };
 //! ---------------- Render Product price  high to low ----------------
 let renderProductPHL = (arr) => {
@@ -152,11 +158,11 @@ let renderProductPHL = (arr) => {
         <div class="d-flex">
           <a
           href="./detail.html?productId=${item.id}"
-          class="btn btn-danger w-50 me-1 btnShoes"
+          class="btn w-50 me-1 btnShoes"
           >
           Buy now
           </a>
-              <button class="btn btn-danger w-50 ms-1 btnShoes">Add cart</button>
+              <button class="btn w-50 ms-1 btnShoes">Add cart</button>
             </div>
       </div>
     </div>
@@ -189,11 +195,11 @@ let renderProductPLH = (arr) => {
         <div class="d-flex">
           <a
           href="./detail.html?productId=${item.id}"
-          class="btn btn-danger w-50 me-1 btnShoes"
+          class="btn w-50 me-1 btnShoes"
           >
           Buy now
           </a>
-              <button class="btn btn-danger w-50 ms-1 btnShoes">Add cart</button>
+              <button class="btn w-50 ms-1 btnShoes">Add cart</button>
             </div>
       </div>
     </div>

@@ -75,11 +75,11 @@ let renderRelatedProducts = (arr) => {
                     <div class="d-flex">
                       <a
                         href="./detail.html?productId=${product.id}"
-                        class="btn btn-danger w-50 me-1 btnShoes"
+                        class="btn w-50 me-1 btnShoes"
                       >
                         Buy now
                       </a>
-                      <button class="btn btn-danger w-50 ms-1 btnShoes">
+                      <button class="btn w-50 ms-1 btnShoes">
                         Add cart
                       </button>
                     </div>
