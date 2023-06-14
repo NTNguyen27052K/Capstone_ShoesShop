@@ -1,6 +1,6 @@
 var infoUser = JSON.parse(localStorage.getItem("infoUser"));
-console.log(infoUser);
-if (infoUser != NaN) {
+
+if (infoUser) {
   document.getElementById("idSignIN").innerHTML = infoUser.name;
 }
 
